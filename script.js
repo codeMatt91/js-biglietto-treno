@@ -23,6 +23,7 @@ const userKm = parseInt(prompt('Quanti Km hai percorso?').trim());
 // #2
 const userAge = parseInt(prompt('Quanti anni hai?').trim());
 
+// Controllo se inserisco un numero valido
 if (isNaN(userKm) || isNaN(userAge)) {
    alert('Inserisci un numero valido')
 }
@@ -31,7 +32,7 @@ console.log(`"userKm :" ${userKm}`);
 console.log(`"userAge :" ${userAge}`);
 
 // #3
-let priceTicketFull = userKm * 0.21;
+let priceTicketFull = (userKm * 0.21).toFixed(2);
 console.log(`"Ticket Full :" ${priceTicketFull}`);
 
 // #4
@@ -39,14 +40,15 @@ const priceTicketUnder = (priceTicketFull * 20) / 100;
 const priceTicketOver = (priceTicketFull * 40) / 100;
 
 if (userAge < 18) {
-   priceTicketKids = (priceTicketFull - priceTicketUnder).toFixed(2)
+   priceTicketKids = (priceTicketFull - priceTicketUnder).toFixed(2);
    console.log(`Ticket Kids : ${priceTicketKids}`);
-   document.getElementById('prezzo-biglietto').innerText = `Il prezzo del tuo biglietto, con tariffa under 18 è di : ${priceTicketKids}€`
+   document.getElementById('prezzo-biglietto').innerText = `Il prezzo del tuo biglietto, con tariffa under 18 è di : ${priceTicketKids}€`;
 } else if (userAge > 65) {
-   priceTicketSenior = priceTicketFull - priceTicketOver
-   document.getElementById('prezzo-biglietto').innerText = `Il prezzo del tuo biglietto, con tariffa over 65 è di : ${priceTicketSenior}€`
-   console.log(`Ticket Senior : ${priceTicketSenior}`).toFixed(2)
+   priceTicketSenior = (priceTicketFull - priceTicketOver).toFixed(2);
+   document.getElementById('prezzo-biglietto').innerText = `Il prezzo del tuo biglietto, con tariffa over 65 è di : ${priceTicketSenior}€`;
+   console.log(`Ticket Senior : ${priceTicketSenior}`);
 } else {
-   document.getElementById('prezzo-biglietto').innerText = `Il prezzo del tuo biglietto è di : ${priceTicketFull}€`
-   console.log(`Ticket Adult : ${priceTicketFull}`).toFixed(2)
+   document.getElementById('prezzo-biglietto').innerText = `Il prezzo del tuo biglietto è di : ${priceTicketFull}€`;
+   let log = `Ticket Adult : ${priceTicketFull}`;
+   console.log(log);
 }
