@@ -18,4 +18,22 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 */
 
+// #1 
+const userKm = prompt('Quanti Km hai percorso?').trim();
+// #2
+const userAge = prompt('Quanti anni hai?').trim();
 
+console.log(`"userKm :" ${userKm}`);
+console.log(`"userAge :" ${userAge}`);
+
+// #3
+let priceTicketFull = userKm * 0.21;
+console.log(priceTicketFull);
+
+// #4
+let priceTicketUnder;
+let priceTicketOver;
+
+if (userAge < 18) {
+
+}
