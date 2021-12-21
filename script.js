@@ -28,18 +28,18 @@ console.log(`"userAge :" ${userAge}`);
 
 // #3
 let priceTicketFull = userKm * 0.21;
-console.log(priceTicketFull);
+console.log(`"Ticket Full :" ${priceTicketFull}`);
 
 // #4
 const priceTicketUnder = (priceTicketFull * 20) / 100;
 const priceTicketOver = (priceTicketFull * 40) / 100;
 
 if (userAge < 18) {
-   priceTicketKids = priceTicketFull - priceTicketUnder
-   console.log(priceTicketKids);
+   priceTicketKids = (priceTicketFull - priceTicketUnder).toFixed(2)
+   console.log(`"Ticket Kids :" ${priceTicketKids}`);
 } else if (userAge > 65) {
    priceTicketSenior = priceTicketFull - priceTicketOver
-   console.log(priceTicketSenior)
+   console.log(`"Ticket Senior :" ${priceTicketSenior}`).toFixed(2)
 } else {
-   console.log(priceTicketFull)
+   console.log(`"Ticket Adult :" ${priceTicketFull}`).toFixed(2)
 }
