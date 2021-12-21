@@ -23,6 +23,10 @@ const userKm = parseInt(prompt('Quanti Km hai percorso?').trim());
 // #2
 const userAge = parseInt(prompt('Quanti anni hai?').trim());
 
+if (isNaN(userKm) || isNaN(userAge)) {
+   alert('Inserisci un numero valido')
+}
+
 console.log(`"userKm :" ${userKm}`);
 console.log(`"userAge :" ${userAge}`);
 
