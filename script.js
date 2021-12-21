@@ -37,11 +37,13 @@ const priceTicketOver = (priceTicketFull * 40) / 100;
 if (userAge < 18) {
    priceTicketKids = (priceTicketFull - priceTicketUnder).toFixed(2)
    console.log(`"Ticket Kids :" ${priceTicketKids}`);
-
+   document.getElementById('prezzo-biglietto').innerText = `Il prezzo del tuo biglietto, con tariffa under 18 è di : ${priceTicketKids}€`
 } else if (userAge > 65) {
    priceTicketSenior = priceTicketFull - priceTicketOver
    console.log(`"Ticket Senior :" ${priceTicketSenior}`).toFixed(2)
+   document.getElementById('prezzo-biglietto').innerText = `Il prezzo del tuo biglietto, con tariffa over 65 è di : ${priceTicketSenior}€`
 } else {
    console.log(`"Ticket Adult :" ${priceTicketFull}`).toFixed(2)
+   document.getElementById('prezzo-biglietto').innerText = `Il prezzo del tuo biglietto è di : ${priceTicketFull}€`
 }
 
