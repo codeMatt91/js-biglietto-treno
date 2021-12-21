@@ -31,9 +31,15 @@ let priceTicketFull = userKm * 0.21;
 console.log(priceTicketFull);
 
 // #4
-let priceTicketUnder;
-let priceTicketOver;
+const priceTicketUnder = (priceTicketFull * 20) / 100;
+const priceTicketOver = (priceTicketFull * 40) / 100;
 
 if (userAge < 18) {
-
+   priceTicketKids = priceTicketFull - priceTicketUnder
+   console.log(priceTicketKids);
+} else if (userAge > 65) {
+   priceTicketSenior = priceTicketFull - priceTicketOver
+   console.log(priceTicketSenior)
+} else {
+   console.log(priceTicketFull)
 }
