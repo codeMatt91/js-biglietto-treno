@@ -3,3 +3,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://s3.amazonaws.com/cdn-media.teknoring/wp-content/uploads/2018/01/treno_stazione.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+#prezzo-biglietto {
+  padding: 80px;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+}
