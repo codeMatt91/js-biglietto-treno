@@ -19,9 +19,9 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 */
 
 // #1 
-const userKm = prompt('Quanti Km hai percorso?').trim();
+const userKm = parseInt(prompt('Quanti Km hai percorso?').trim());
 // #2
-const userAge = prompt('Quanti anni hai?').trim();
+const userAge = parseInt(prompt('Quanti anni hai?').trim());
 
 console.log(`"userKm :" ${userKm}`);
 console.log(`"userAge :" ${userAge}`);
@@ -37,9 +37,11 @@ const priceTicketOver = (priceTicketFull * 40) / 100;
 if (userAge < 18) {
    priceTicketKids = (priceTicketFull - priceTicketUnder).toFixed(2)
    console.log(`"Ticket Kids :" ${priceTicketKids}`);
+
 } else if (userAge > 65) {
    priceTicketSenior = priceTicketFull - priceTicketOver
    console.log(`"Ticket Senior :" ${priceTicketSenior}`).toFixed(2)
 } else {
    console.log(`"Ticket Adult :" ${priceTicketFull}`).toFixed(2)
 }
+
